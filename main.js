@@ -1,16 +1,24 @@
+//calcula la fecha de tu muerte
+
+let hoy = new Date();
+let anioActual = hoy.getFullYear();
 let intruccionesUno =
 	"Hola, dame tu fecha de nacimiento y te dire cuando moriras ";
 let edad = prompt(intruccionesUno);
-let anioActual = 2022;
 let edadActual = anioActual - edad;
+let suerte = getRandomInt(45);
+let edadMuerte = suerte + edadActual;
 
-for (let i = edadActual; i <= 70; i++) {
-	console.log("edad_actual", edadActual);
-	if (edadActual < 70) {
+function getRandomInt(max) {
+	return Math.floor(Math.random() * max);
+}
+
+for (let i = edadActual; i <= edadMuerte; i++) {
+	if (edadActual < edadMuerte) {
 		console.log("no vas a morir en ", anioActual++);
 	} else {
 		console.log(
-			" morirás en ",
+			" morirás en el año",
 			anioActual + 70,
 			" a los ",
 			edadActual,
