@@ -3,7 +3,7 @@
 let hoy = new Date();
 let anioActual = hoy.getFullYear();
 let intruccionesUno =
-	"Hola, dame tu fecha de nacimiento y te dire cuando moriras ";
+	"Hola, dame tu fecha de nacimiento y te diré cuándo morirás ";
 let edad = prompt(intruccionesUno);
 let edadActual = anioActual - edad;
 let suerte = getRandomInt(45);
@@ -15,10 +15,10 @@ function getRandomInt(max) {
 
 for (let i = edadActual; i <= edadMuerte; i++) {
 	if (edadActual < edadMuerte) {
-		console.log("no vas a morir en ", anioActual++);
+		console.log("no vas a morir en el año", anioActual++);
 	} else {
 		console.log(
-			" morirás en el año",
+			" Morirás en el año",
 			anioActual + 70,
 			" a los ",
 			edadActual,
